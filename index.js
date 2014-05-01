@@ -38,7 +38,7 @@ Trie.prototype.find = function ( needle ) {
   return this.build(node, needle, true);
 };
 
-Trie.prototype.build = function ( node, prefix, omit ) {
+Trie.prototype.build = function ( node, prefix, isroot ) {
   prefix = prefix || "";
   var arr = [];
   var words;
@@ -50,7 +50,7 @@ Trie.prototype.build = function ( node, prefix, omit ) {
     }
   }
 
-  if ( !omit && arr.length == 0 ) {
+  if ( arr.length == 0 || isroot ) {
     arr.push(prefix);
   }
 
