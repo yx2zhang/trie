@@ -1,0 +1,19 @@
+{
+  "name": "component-trie",
+  "description": "trie",
+  "keywords": ["trie"],
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tm-components/trie.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --harmony --reporter spec"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*"
+  }
+}
