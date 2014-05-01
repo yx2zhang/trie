@@ -13,8 +13,10 @@
 
 ```
 var trie = new Trie();
-trie.add("thomas", "tie", "toggle");
-trie.find("th"); // ["thomas"]
+var list = ["thomas", "tie", "toggle"];
+trie.add(list);
+trie.add("thorn");
+trie.find("th"); // ["thomas", "thorn"];
 ```
 
 ## API
