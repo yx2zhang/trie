@@ -13,4 +13,10 @@ describe('trie', function(){
     test.sort();
     expect(test).to.eql(list);
   });
+
+  it('finds exact match', function() {
+    var trie = new Trie();
+    trie.add("app");
+    expect(trie.find("app")).to.eql(["app"]);
+  });
 });
