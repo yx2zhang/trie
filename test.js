@@ -19,4 +19,10 @@ describe('trie', function(){
     trie.add("app");
     expect(trie.find("app")).to.eql(["app"]);
   });
+
+  it('works on empty', function() {
+    var trie = new Trie();
+    expect(trie.find("app")).to.eql([]);
+  });
+
 });
