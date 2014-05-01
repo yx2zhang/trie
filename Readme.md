@@ -1,5 +1,5 @@
 
-# Regex
+# Trie
 
   A trie.
 
