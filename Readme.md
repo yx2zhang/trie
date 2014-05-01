@@ -3,6 +3,8 @@
 
   A trie.
 
+  [![Build Status](https://travis-ci.org/tm-components/trie.svg)](https://travis-ci.org/tm-components/trie)
+
 ## Installation
 
   Install with [component(1)](http://component.io):
