@@ -3,15 +3,23 @@ function Trie () {
   this.root = {};
 }
 
-Trie.prototype.add = function ( str ) {
-  var node = this.root;
-  while ( str.length ) {
-    var c = str[0];
-    str = str.substr(1, str.length)
-    if ( !node[c] ) {
-      node[c] = {};
+Trie.prototype.add = function ( value ) {
+  if ( typeof value == "string" ) {
+    var str = value;
+    var node = this.root;
+    while ( str.length ) {
+      var c = str[0];
+      str = str.substr(1, str.length)
+      if ( !node[c] ) {
+        node[c] = {};
+      }
+      node = node[c];
     }
-    node = node[c];
+  }
+  else if ( value instanceof Array ) {
+    for ( i in value ) {
+      this.add(value[i]);
+    }
   }
 };
 
