@@ -26,14 +26,11 @@ Trie.prototype.find = function ( needle ) {
       break;
     }
   }
-  var results = this.build(node, needle);
-  if ( results.length == 1 && results[0] == needle ) {
-    results.length = 0;
-  }
-  return results;
+
+  return this.build(node, needle, true);
 };
 
-Trie.prototype.build = function ( node, prefix ) {
+Trie.prototype.build = function ( node, prefix, omit ) {
   prefix = prefix || "";
   var arr = [];
   var words;
@@ -45,7 +42,7 @@ Trie.prototype.build = function ( node, prefix ) {
     }
   }
 
-  if ( arr.length == 0 ) {
+  if ( !omit && arr.length == 0 ) {
     arr.push(prefix);
   }
 
